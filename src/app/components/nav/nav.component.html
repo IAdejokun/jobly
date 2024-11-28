@@ -14,11 +14,14 @@
   </div>
   <div id="hs-navbar-example" class="hidden hs-collapse overflow-hidden transition-all duration-300 basis-full grow sm:block" aria-labelledby="hs-navbar-example-collapse">
     <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5 font-poppins">
-      <a class="font-medium text-blue-500 focus:outline-none" href="#" aria-current="page">Home</a>
-      <a class="font-medium text-gray-600 hover:text-blue-500 focus:outline-none focus:text-gray-400" href="#">Portal</a>
-      <a class="font-medium text-gray-600 hover:text-blue-500 focus:outline-none focus:text-gray-400" href="#">Pricing</a>
-      <a class="font-medium text-gray-600 hover:text-blue-500 focus:outline-none focus:text-gray-400" href="#">Contact</a>
+      <a routerLinkActive="active-link" class="font-medium text-gray-600 focus:outline-none hover:text-blue-500" routerLink="/home" [routerLinkActiveOptions]="{exact:true}" aria-current="page">Home</a>
+      <a routerLinkActive="active-link" class="font-medium text-gray-600 hover:text-blue-500 focus:outline-none focus:text-gray-400 " routerLink="/about">About</a>
+      <a routerLinkActive="active-link" class="font-medium text-gray-600 hover:text-blue-500 focus:outline-none focus:text-gray-400 " routerLink="/auth/registeration">Portal</a>
+      <a routerLinkActive="active-link" class="font-medium text-gray-600 hover:text-blue-500 focus:outline-none focus:text-gray-400" routerLink="/pricing">Pricing</a>
+      <a routerLinkActive="active-link" class="font-medium text-gray-600 hover:text-blue-500 focus:outline-none focus:text-gray-400" routerLink="/contact">Contact</a>
     </div>
   </div>
 </nav>
 </header>
+
+<!-- <router-outlet></router-outlet> -->

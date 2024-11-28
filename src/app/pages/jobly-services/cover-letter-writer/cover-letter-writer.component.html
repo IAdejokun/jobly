@@ -1,1 +1,38 @@
+
 <app-sidebar></app-sidebar>
+
+<section class="w-[50%] mx-auto">
+    <div class="font-poppins my-6">
+    <p class="text-3xl font-bold mb-5">Enter all the details of Regarding your Dream Job to generate Custom Cover Letter</p>
+    <p><span class="text-red-600">*</span>Fill in the required fields</p>
+    </div>
+<form [formGroup]="coverLetterFormData" (ngSubmit)="onLetterSubmit()">
+
+    <div class="max-w-sm space-y-3 my-9">
+        <label for="textarea-label" class="block text-sm font-medium mb-2 text-black font-poppins"><span class="text-red-600 text-lg">*</span>Enter job Description</label>
+        <textarea formControlName="jobDescription" class="sm:p-5 py-3 px-4 block w-full border-gray-500 rounded-lg text-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none border" rows="10" placeholder="Enter Job Description"></textarea>
+      </div>
+
+
+      <!-- Enter your resume for job here -->
+     <div>
+
+        <label for="textarea-label" class="block text-sm font-medium mb-2 text-black font-poppins"><span class="text-red-600 text-lg">*</span>Input your Resume</label>
+        <input type="file" formControlName="resumeSelecter">
+
+     </div> 
+
+     <!-- additional info you want to add start -->
+
+     <div class="max-w-sm space-y-3 my-9">
+        <label for="textarea-label" class="block text-sm font-medium mb-2 text-black font-poppins">Add additional information about yourself ?</label>
+        <textarea formControlName="jobDescription" formControlName="additionalInfo" class="text-lg sm:p-5 py-3 px-4 block w-full border-gray-500 rounded-lgfocus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none border" rows="10" placeholder="Add any other information"></textarea>
+      </div>
+
+     <!-- additional info you want to add end -->
+
+    <button type="submit" value="submit" class=" my-4 border font-light font-poppins hover:bg-green-500 hover:text-white p-3 rounded-xl bg-blue-500 text-white shadow-sm hover:shadow-lg transition-all duration-150">
+Submit Here
+    </button>
+</form>
+</section>
